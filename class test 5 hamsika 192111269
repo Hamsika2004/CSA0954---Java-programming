@@ -1,0 +1,93 @@
+question 1
+package q1;
+import java.util.Scanner;
+public class trianglepattern {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter the number of rows:");
+		int n=input.nextInt();
+		for(int i=n;i>=1;i--)
+		{
+		 for(int j=0;j<n-i;j++)
+		 {
+		 System.out.print(" ");
+		 }
+		 for(int k=1;k<=i;k++)
+		 {
+		 System.out.print(" *");
+		 }
+		 System.out.println();
+	}
+}
+}
+question 2: 
+package q2;
+import java.util.Scanner;
+public class grade 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Scanner a=new Scanner(System.in);
+		 System.out.println("Enter the marks in python");
+		 int py=a.nextInt();
+		 System.out.println("Enter the marks in c programming");
+		 int c=a.nextInt();
+		 System.out.println("Enter the marks in Mathematics");
+		 int mat=a.nextInt();
+		 System.out.println("Enter the marks in Physics");
+		 int phy=a.nextInt();
+		 int tot=mat+py+c+phy;
+		 Double agre=(tot/(400.0))*100;
+		 System.out.println("Total="+tot);
+		 System.out.println("Aggregate="+agre);
+		 if(agre>75){
+		 System.out.println("Distinction");
+		 }
+		 else if(agre>=60&&agre<75){
+		 System.out.println("First Division");
+		 }
+		 else if(agre>=50&&agre<60){
+		 System.out.println("Second Division");
+		 }
+		 else if(agre>=40&&agre<50){
+		 System.out.println("Third Division");
+		 }
+		 else{
+		 System.out.println("Fail");
+		 }
+		 }
+	}
+question 3: 
+package q3;
+import java.util.Scanner;
+public class rangeq3 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		 int lower=input.nextInt();
+		 int upper=input.nextInt();
+		 int i=0,x=1;
+		 while(i<upper)
+		 {
+		 int sum=0;
+		 int y=x*x;
+		 int t=y;
+		 while(y!=0)
+		 {
+		 int rem=y%10;
+		 sum=sum+rem;
+		 y=y/10;
+		 }
+		 if(sum<10)
+		 {
+		 System.out.print(t+" ");
+		 }
+		 i=x*x;
+		 x++;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+package array;
+import java.util.Scanner;
+class array {
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter lower range and upper range:");
+        int lower=input.nextInt();
+        int upper= input.nextInt();
+        for(int i=lower;i<=upper;i++)
+        {
+            System.out.println("("+i+","+(i*i)+")"+" ");
+
+        }
+
+    }
+}

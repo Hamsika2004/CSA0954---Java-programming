@@ -1,0 +1,83 @@
+question 1: 
+import java.util.Scanner;
+class nperfectnumbers {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter no.of perfect numbers:");
+        int n=input.nextInt();
+        int sum=0,temp=0;
+        for(int j=2;j<=1000;j++)
+        {
+            if(n>temp)
+                sum=1;
+            for(int i=2;i<j;i++)
+            {
+                if(j%i==0)
+                    sum=sum+i;
+            }
+            if(sum==j)
+            {
+                System.out.print(j+" ");
+                temp=temp+1;
+            }
+        }
+    }
+}
+question 2:
+                    package q3;
+import java.util.Scanner;
+public class vowels {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner input=new Scanner(System.in); 
+String name=input.nextLine(); 
+int len=name.length(); 
+char a[]=new char[len]; 
+int vow=0; 
+for(int i=0;i<len;i++) 
+{ 
+    a[i]=name.charAt(i); 
+    if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u' 
+      ||a[i]=='A'||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='U') 
+        vow=vow+1; 
+} 
+System.out.println(vow); 
+
+	}
+}
+question 3: 
+package common;
+import java.util.Scanner;
+import java.util.*;
+public class common {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+				Scanner sc=new Scanner(System.in);
+				List<Integer> l=new ArrayList<Integer>();
+				System.out.print("Enter the size of the first array : ");
+				int n=sc.nextInt();
+				int a1[]=new int [n];
+				for (int i=0;i<n;i++)
+				{
+					a1[i]=sc.nextInt();
+				}
+		 		System.out.print("Enter the size of the second array : ");
+				int m=sc.nextInt();
+				int a2[]=new int [m];
+				for (int j=0;j<m;j++)
+				{
+					a2[j]=sc.nextInt();
+				}
+				for(int x=0;x<n;x++)
+				{
+					for(int y=0;y<m;y++)
+					{
+						if(a1[x]==a2[y])
+						{
+							l.add(a1[x]);
+						}
+					}
+				}                                                                                  
+				System.out.print(l);
+			}
+		}

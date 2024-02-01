@@ -1,0 +1,14 @@
+import java.util.Scanner;
+import java.lang.Math;
+class squareroot {
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the number:");
+        double n=input.nextInt();
+        System.out.println("Square root: ");
+        double sqrt=Math.pow(n,0.5);
+        double sq=Math.sqrt(n);
+        System.out.println(sqrt+","+"-"+sqrt);
+    }
+}

@@ -1,0 +1,84 @@
+question 1:
+import java.util.Scanner;
+public class frequency {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.println("Elements and frequency of the array are:");
+		int a[]=new int[] {1,2,8,3,2,2,2,5,1}; 
+		int t[]=new int[a.length]; 
+		int visited=-1; 
+		for(int i=0;i<a.length;i++) 
+		{ 
+		int count=1; 
+		for(int j=i+1;j<a.length;j++) 
+		{ 
+		if(a[i]==a[j]) 
+		{ 
+	    count++;
+		t[j]=visited; 
+		} 
+		} 
+		if(t[i]!=visited) 
+		t[i]=count; 
+		} 
+		for(int i=0;i<a.length;i++) 
+		{ 
+		if(t[i]!=visited) 
+		System.out.println(a[i]+"  "+t[i]); 
+		}
+	}
+}
+
+question 2: 
+import java.util.Scanner;
+public class co {
+		   	int num;
+		   	int flt;
+		   	co(int num,int  flt)
+			{
+		      		this.num = num;
+		      		this.flt = flt;
+		   	}
+			public static void main(String args[])
+			{
+		      		Scanner sc = new Scanner(System.in);
+		      		System.out.print("Enter integer : ");
+				if(!sc.hasNextInt())
+				{
+					System.out.print("Invalid");
+					return;
+				}
+		      		int num = sc.nextInt();
+		      		System.out.print("Enter integer: ");
+				if(!sc.hasNextInt())
+				{
+					System.out.print("Invalid");
+					return;
+				}
+		      		int flt = sc.nextInt();      
+		      		co obj = new co(num, flt);
+		      		System.out.println(obj.num);
+		      		System.out.println(obj.flt);
+		   }
+		}
+
+question 3:
+import java.util.Scanner;
+public class length {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			Scanner sc=new Scanner(System.in); 
+			int wl=0; 
+			System.out.println("Enter the string: "); 
+			String s1=sc.nextLine(); 
+			String w[]=s1.split(" "); 
+			if(w.length>0){
+			    wl=w[w.length-1].length(); 
+			} 
+			else{ 
+			wl=0; 
+			}
+			System.out.println( "length is : "+ wl); 
+		}
+	}

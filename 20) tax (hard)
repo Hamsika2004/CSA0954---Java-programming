@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class incometax 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter income:");
+		int income=input.nextInt(); 
+		float tax; 
+		if(income<=250000) 
+		System.out.println("No tax"); 
+		else if(income>=250001 && income<=500000) 
+		System.out.println("Tax= "+income/10); 
+		else if(income>=500001 && income<=1000000) 
+		    System.out.println("Tax= "+income/20); 
+		else 
+		    System.out.println("Tax= "+income/30);
+	}
+}

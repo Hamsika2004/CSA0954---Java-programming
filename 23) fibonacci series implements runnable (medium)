@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class FibonacciSeries implements Runnable {
+    private int count;
+
+    public FibonacciSeries(int count) {
+        this.count = count;
+    }
+    public void run() {
+        int first = 0, second = 1;
+        System.out.println("Fibonacci Series: ");
+
+        for (int i = 0; i < count; i++) {
+            System.out.print(first + " ");
+            int next = first + second;
+            first = second;
+            second = next;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int count=input.nextInt();
+        FibonacciSeries fibonacciRunnable = new FibonacciSeries(count);
+        Thread thread = new Thread(fibonacciRunnable);
+        thread.start();
+    }
+}

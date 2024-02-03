@@ -1,0 +1,280 @@
+question 1: 
+import java.util.Scanner;
+public class matrixmultiply {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int r1, r2,c1,c2,i,j,k,sum;
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the number of rows of matrix1");
+		r1 = in.nextInt();
+		System.out.println("Enter the number columns of matrix 1");
+		c1 = in.nextInt();
+		System.out.println("Enter the number of rows of matrix2");
+		r2 = in.nextInt();
+		System.out.println("Enter the number of columns of matrix 2");
+		c2 = in.nextInt();
+		if(c1==r2)
+		{
+		int mat1[][] = new int[r1][c1]; 
+		int mat2[][] = new int[r2][c2]; 
+		int res[][] = new int[r1][c2];
+		System.out.println("Enter the elements of matrix1");
+		for ( i= 0 ; i < r1 ; i++ )
+		{ 
+		for ( j= 0 ; j < c1 ;j++ )
+		mat1[i][j] = in.nextInt();
+		}
+		System.out.println("Enter the elements of matrix2");
+		for ( i= 0 ; i < r2 ; i++ )
+		{ 
+		for ( j= 0 ; j < c2 ;j++ )
+		mat2[i][j] = in.nextInt();
+		}
+		System.out.println("\n\noutput matrix:-");
+		for ( i= 0 ; i < r1 ; i++ )
+		for ( j= 0 ; j <c2;j++)
+		{
+		sum=0;
+		for ( k= 0 ; k <r2;k++ )
+		{
+		sum +=mat1[i][k]*mat2[k][j] ;
+		}
+		res[i][j]=sum;
+		}
+		for ( i= 0 ; i < r1; i++ )
+		{
+		for ( j=0 ; j < c2;j++ )
+		System.out.print(res[i][j]+" ");
+		 
+		System.out.println();
+		}
+		}
+		else
+		System.out.print("multipication does not exist ");
+		}
+		}
+
+	question 2: 
+import java.util.Scanner;
+public class arrayindex {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+					System.out.print("Enter the size of the array : ");
+					int n=sc.nextInt ();
+					int sum=0;
+					try{
+						int a[]=new int[n];
+						for(int i=0;i<n;i++)
+						{
+							a[i]=sc.nextInt();
+							sum=sum+a[i];
+						}
+						System.out.print(sum);
+					}
+					catch(ArrayIndexOutOfBoundsException e)
+					{
+						System.out.println("Array size exceeded");
+					}
+				
+			}
+		}
+
+question 3:
+import java.util.Scanner;
+import java.util.Arrays;
+public class reversealphabeticalorder {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Scanner input=new Scanner(System.in);
+		 System.out.println("Enter the word:");
+	        String name=input.nextLine(); 
+	        int len=name.length();
+	        System.out.println("Alphabetical Order:");
+	        char arr[]=new char[len]; 
+	        String Alpha; 
+	        for(int i=0;i<len;i++) 
+	        { 
+	            arr[i]=name.charAt(i); 
+	        } 
+	        Arrays.sort(arr); 
+	        for(int i=len-1;i>=0;i--) 
+	        { 
+	            System.out.print(arr[i]+" "); 
+	        }
+	}
+}
+
+question 4:
+import java.util.Scanner;
+public class composite {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+				Scanner sc=new Scanner(System.in);
+				System.out.print("Enter the number of elements in the array and enter array elements:");
+				int n=sc.nextInt();
+				int a[]=new int[n];
+				int count=0,m=0;
+				for(int i=0;i<n;i++)
+				{
+					a[i]=sc.nextInt();
+				}
+				for(int i=0;i<n;i++)
+				{
+					int c=0;
+					for(int j=2;j<=a[i];j++)
+					{
+						if(a[i]%j==0)
+						{
+							c=c+1;
+						}
+					}
+					if(c>2)
+					{
+						count=count+1;
+					}
+					else
+					{
+						m=m+1;
+					}
+				}
+				System.out.println("number of composite numbers are:");
+				System.out.print(count++);
+			}
+		}
+
+question 5: 
+import java.util.Scanner;
+public class vc {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter word:");
+		String name=input.nextLine(); 
+		int len=name.length(); 
+		char a[]=new char[len]; 
+		char vow[]=new char[len]; 
+		char con[]=new char[len]; 
+		int v=0,c=0; 
+		for(int i=0;i<len;i++) 
+		{ 
+		    a[i]=name.charAt(i); 
+		    if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u' 
+		      ||a[i]=='A'||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='U') { 
+		        vow[v] = a[i]; 
+		        v++; 
+		    } 
+		    else { 
+		        con[c] = a[i]; 
+		        c++; 
+		    } 
+		} 
+		System.out.print("Consonants: "); 
+		for(int i=0;i<v;i++) 
+		{ 
+		    System.out.print(vow[i]); 
+		} 
+		System.out.print("\nvowels: "); 
+		for(int j=0;j<c;j++) 
+		{ 
+		    System.out.print(con[j]); 
+	}
+}
+}
+
+question 6: 
+import java.util.Scanner;
+public class pattern {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner input=new Scanner(System.in);
+        System.out.println("enter n:");
+        int n=input.nextInt();
+        for(int i=1;i<=n;i++) {
+        	for(int j=1;j<=n;j++) {
+        		System.out.print("*");
+        	}
+        	System.out.println();
+        }
+	}
+}
+
+question 7: 
+import java.util.Scanner;
+public class romantodecimal {
+		public static int value(char c) 
+	    { 
+	        if(c=='I') 
+	            return 1; 
+	        if(c=='V') 
+	            return 5; 
+	        if(c=='X') 
+	            return 10; 
+	        if(c=='L') 
+	            return 50; 
+	        if(c=='C') 
+	            return 100; 
+	        if(c=='D') 
+	            return 500; 
+	        if(c=='M') 
+	            return 1000; 
+	        return -1; 
+	    } 
+	    public static int romantodecimal(String str) 
+	    { 
+	        int res=0; 
+	        for(int i=0;i<str.length();i++) 
+	        { 
+	            int s1=value(str.charAt(i)); 
+	            if(i+1<str.length()) 
+	            { 
+	                int s2=value(str.charAt(i+1)); 
+	                if(s1>=s2) 
+	                    res=res+s1; 
+	                else 
+	                { 
+	                    res=res+s2-s1; 
+	                    i++; 
+	                } 
+	            } 
+	            else 
+	                res=res+s1; 
+	        } 
+	        return res; 
+	 
+	    } 
+	    public static void main(String[] args) 
+	    { 
+	        Scanner input=new Scanner(System.in);
+	        System.out.println("Enter symbol:");
+	        String str=input.next(); 
+	        System.out.println(romantodecimal(str));
+	        }
+}
+
+question 8: 
+import java.util.*;
+public class bankclass {
+		float getRateOfInterest(){return 0;}
+	}
+	class SBI extends bankclass{
+	    float getRateOfInterest(){return 8.4f;}
+	}
+	class ICICI extends bankclass{
+	    float getRateOfInterest(){return 7.3f;}
+	}
+	class AXIS extends bankclass{
+	    float getRateOfInterest(){return 9.7f;}
+	}
+	class TestPolymorphism{
+	    public static void main(String args[]){
+	        bankclass b;
+	        b=new SBI();
+	        System.out.println("SBI Rate of Interest: "+b.getRateOfInterest());
+	        b=new ICICI();
+	        System.out.println("ICICI Rate of Interest: "+b.getRateOfInterest());
+	        b=new AXIS();
+	        System.out.println("AXIS Rate of Interest: "+b.getRateOfInterest());
+	    }
+	}
+
